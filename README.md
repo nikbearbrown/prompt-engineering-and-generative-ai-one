@@ -4,7 +4,17 @@
 
 You can use the book without a model account. The optional offline labs use Python 3.9+ and no external packages. Begin each exercise by predicting the result yourself. If you use model assistance later, use only synthetic inputs, record the changes, and verify consequential claims independently.
 
-## Part I · Build a checkable workflow
+## Learning outcomes
+
+After working through this draft, readers should be able to:
+
+- State a task contract and compare prompt changes against a fixed baseline.
+- Ground answers in evidence and set boundaries on tool actions and permissions.
+- Build a repeatable evaluation and diagnose harder cases involving audiences, long context, optimization, and multimodal workflows.
+
+## Chapters
+
+### Part I · Build a checkable workflow
 
 | Chapter | Reader outcome |
 | --- | --- |
@@ -16,7 +26,7 @@ You can use the book without a model account. The optional offline labs use Pyth
 
 Start with the [first-attempt sheet](activity/FIRST-ATTEMPT.md), then consult the [Part I guide](PART-I.md). The [Part I capstone](activity/CAPSTONE.md) connects the task, evidence, permissions and evaluation.
 
-## Part II · Diagnose harder cases
+### Part II · Diagnose harder cases
 
 | Chapter | Reader outcome |
 | --- | --- |
