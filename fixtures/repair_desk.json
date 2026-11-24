@@ -1,0 +1,112 @@
+{
+  "policies": [
+    {
+      "id": "N-1",
+      "desk": "north",
+      "kind": "dropoff",
+      "effective": "2026-03-01",
+      "expires": null,
+      "limit_kg": 12,
+      "text": "North staff will assess items weighing at most 12 kg."
+    },
+    {
+      "id": "N-0",
+      "desk": "north",
+      "kind": "dropoff",
+      "effective": "2024-01-01",
+      "expires": "2026-03-01",
+      "limit_kg": 15,
+      "text": "North staff will assess items weighing at most 15 kg."
+    },
+    {
+      "id": "N-2",
+      "desk": "north",
+      "kind": "notice",
+      "effective": "2026-01-01",
+      "expires": null,
+      "limit_kg": null,
+      "text": "North staff will send a notice within 12 hours after intake."
+    },
+    {
+      "id": "S-1",
+      "desk": "south",
+      "kind": "dropoff",
+      "effective": "2026-01-01",
+      "expires": null,
+      "limit_kg": 8,
+      "text": "South staff will assess items weighing at most 8 kg."
+    },
+    {
+      "id": "S-2",
+      "desk": "south",
+      "kind": "dropoff",
+      "effective": "2026-03-15",
+      "expires": "2026-04-01",
+      "limit_kg": 10,
+      "text": "South staff will assess items weighing at most 10 kg."
+    }
+  ],
+  "cases": [
+    {
+      "id": "D1",
+      "desk": "north",
+      "day": "2026-03-02",
+      "mass_kg": 12,
+      "keywords": [
+        "north",
+        "12",
+        "notice",
+        "intake"
+      ]
+    },
+    {
+      "id": "D2",
+      "desk": "north",
+      "day": "2026-03-01",
+      "mass_kg": 14,
+      "keywords": [
+        "north",
+        "15"
+      ]
+    },
+    {
+      "id": "D3",
+      "desk": "north",
+      "day": "2026-02-28",
+      "mass_kg": 14,
+      "keywords": [
+        "north",
+        "15"
+      ]
+    },
+    {
+      "id": "D4",
+      "desk": "south",
+      "day": "2026-03-20",
+      "mass_kg": 11,
+      "keywords": [
+        "south",
+        "10"
+      ]
+    },
+    {
+      "id": "D5",
+      "desk": "south",
+      "day": "2026-04-01",
+      "mass_kg": 8,
+      "keywords": [
+        "south"
+      ]
+    },
+    {
+      "id": "D6",
+      "desk": "west",
+      "day": "2026-03-02",
+      "mass_kg": 4,
+      "keywords": [
+        "staff",
+        "assess"
+      ]
+    }
+  ]
+}
