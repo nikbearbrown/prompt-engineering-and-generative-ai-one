@@ -1,0 +1,15 @@
+# Part II transfer: three records, two readers, one decision
+
+A fictional volunteer-run archive wants orientation drafts for people picking up materials after hours. It has several versions of pickup instructions and sometimes displays a printed schedule with an accessible text equivalent. Your role is to prepare a bounded experiment for a future review. Don't publish, transmit or act on any result.
+
+1. **Start without AI.** Invent a small, versioned evidence packet. Write a staff view and a visitor view of the same task. Keep artifact identity, authorized decision, timing, source citations and permissions invariant. Identify one useful presentation difference, such as giving the public explanation before the date, that makes the visitor result easier to use without changing policy.
+2. **Vary context once.** Hold question, target facts, distractors, governing source rule, scorer, and evidence eligibility fixed. Construct two orderings. Add a separate panel for a missing required clause. Write the exact packet trace and state how you'll tell delivery failure from incorrect use of an available clause.
+3. **Compare without chasing the score.** Freeze your direct baseline. On development cases, choose at most three prompt candidates or a smaller budget you can justify. Predeclare an unsupported-authorization gate and one cost measure, such as reviewers' steps, and rank only eligible candidates. Save an untouched group of question templates. Don't alter a test because a candidate surprises you.
+4. **Check both input paths.** Create a small original graphic or a paper sketch and an accessible equivalent with the same identity and date. Report any mismatched data independently. Make sure two readers, one with the graphic and one with the verified equivalent, could defend the same conclusion. Add a cropped or stale alternative where an honest answer must hold or narrow its claim.
+5. **Make one operational decision.** From an invented trace, decide whether to keep the baseline, revise, allow a bounded draft-only check, or stop. Preserve why the output was rejected or approved for review. Distinguish an artifact receipt, a fact a person can substantiate, and permission to act. Give the next reviewer one concrete condition that would change your decision.
+
+## What another reader should be able to repeat
+
+Share your original expectation, version IDs, evaluator, artifact identity, case results by condition, and reasons for hold. If you used any optional permitted model, use only synthetic cases, say how you bounded it, and distinguish observed runs from designed examples. Keep all low-scoring, missing and late cases visible. Report whether you checked values, evidence support, presentation equivalence and lack of effects as separate properties. An aggregate score does not replace those observations.
+
+A reviewer should be able to recreate the contrast or diagnose what prevents them from doing so. For one fresh case, explain the decision unaided. A useful answer names the decisive record and failure threshold, not merely a preferred model or layout.

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500" role="img" aria-labelledby="chart-title chart-desc">
+  <title id="chart-title">C24 R4: Newly catalogued items per named week</title>
+  <desc id="chart-desc">A horizontal bar chart. East room: week 1, eight items; week 4, fourteen. West room: week 1, twelve; week 4, sixteen. Week 2 and week 3 are not shown. The horizontal scale is a count of items newly catalogued in each named week, not a cumulative total.</desc>
+  <rect width="840" height="500" fill="#fff"/>
+  <rect x="23" y="20" width="794" height="460" rx="20" fill="#f7fafc" stroke="#dce5ed"/>
+  <g font-family="system-ui, sans-serif" fill="#15263a">
+    <text x="55" y="63" font-size="25" font-weight="700">Newly catalogued items per named week</text>
+    <text x="55" y="93" font-size="15" fill="#3a5168">Fictional community archive · C24 R4</text>
+    <g stroke="#d1dbe3" stroke-width="1">
+      <path d="M220 117V413 M328 117V413 M436 117V413 M544 117V413 M652 117V413 M760 117V413"/>
+    </g>
+    <path d="M220 116V413H760" fill="none" stroke="#51657b" stroke-width="2"/>
+    <g font-size="15" font-weight="700">
+      <text x="55" y="139">East room</text>
+      <text x="55" y="277">West room</text>
+    </g>
+    <g font-size="16">
+      <text x="154" y="172">Week 1</text>
+      <text x="154" y="225">Week 4</text>
+      <text x="154" y="310">Week 1</text>
+      <text x="154" y="363">Week 4</text>
+    </g>
+    <g fill="#466684">
+      <rect x="220" y="149" width="216" height="32" rx="3" data-room="east" data-week="1" data-items="8"/>
+      <rect x="220" y="287" width="324" height="32" rx="3" data-room="west" data-week="1" data-items="12"/>
+    </g>
+    <g fill="#00695e">
+      <rect x="220" y="202" width="378" height="32" rx="3" data-room="east" data-week="4" data-items="14"/>
+      <rect x="220" y="340" width="432" height="32" rx="3" data-room="west" data-week="4" data-items="16"/>
+    </g>
+    <g font-size="18" font-weight="700">
+      <text x="449" y="171">8</text>
+      <text x="611" y="224">14</text>
+      <text x="557" y="309">12</text>
+      <text x="665" y="362">16</text>
+    </g>
+    <g font-size="14" fill="#34495e" text-anchor="middle">
+      <text x="220" y="435">0</text><text x="328" y="435">4</text><text x="436" y="435">8</text>
+      <text x="544" y="435">12</text><text x="652" y="435">16</text><text x="760" y="435">20</text>
+      <text x="490" y="461">Items newly catalogued during the named week</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,340 @@
+{
+  "description": "Invented archive context evidence packets and hand-authored candidate outputs; no model responses.",
+  "cases": [
+    {
+      "id": "A",
+      "question": "May a visitor take a checked-out tray outside the east reading room, and when is it due?",
+      "target": {
+        "id": "AUTH",
+        "records": [
+          {
+            "id": "A-CURRENT1",
+            "text": "East room current tray policy: trays remain inside the reading room."
+          },
+          {
+            "id": "A-CURRENT2",
+            "text": "East room current tray policy: trays are due the checkout day at 18:00."
+          }
+        ]
+      },
+      "fillers": [
+        {
+          "id": "F1",
+          "records": [
+            {
+              "id": "A-OLD",
+              "text": "Archived superseded tray policy allowed taking a tray out until next morning."
+            }
+          ]
+        },
+        {
+          "id": "F2",
+          "records": [
+            {
+              "id": "A-PICKUP",
+              "text": "East reservation pickup desk ends intake at 17:00."
+            }
+          ]
+        },
+        {
+          "id": "F3",
+          "records": [
+            {
+              "id": "A-WEST",
+              "text": "West room reserves carrying bags in a separate store."
+            }
+          ]
+        },
+        {
+          "id": "F4",
+          "records": [
+            {
+              "id": "A-COUNT",
+              "text": "The east reading room contains four standard sorting benches."
+            }
+          ]
+        }
+      ],
+      "absent": {
+        "id": "ALT",
+        "records": [
+          {
+            "id": "A-NOTE1",
+            "text": "The east room shelf label was replaced on request."
+          },
+          {
+            "id": "A-NOTE2",
+            "text": "The east room counter has a second pencil bin."
+          }
+        ]
+      },
+      "oracle": {
+        "access": "room_only",
+        "deadline": "checkout_day_18:00"
+      },
+      "candidates": {
+        "front": {
+          "state": "answer",
+          "facts": {
+            "access": "room_only",
+            "deadline": "checkout_day_18:00"
+          },
+          "evidence": [
+            "A-CURRENT1",
+            "A-CURRENT2"
+          ]
+        },
+        "middle": {
+          "state": "answer",
+          "facts": {
+            "access": "outside_allowed",
+            "deadline": "next_day_09:00"
+          },
+          "evidence": [
+            "A-OLD"
+          ]
+        },
+        "end": {
+          "state": "answer",
+          "facts": {
+            "access": "room_only",
+            "deadline": "checkout_day_18:00"
+          },
+          "evidence": [
+            "A-CURRENT1",
+            "A-CURRENT2"
+          ]
+        },
+        "absent": {
+          "state": "insufficient",
+          "facts": {},
+          "evidence": []
+        }
+      }
+    },
+    {
+      "id": "B",
+      "question": "May a visitor take a checked-out west map sleeve outside, and when is it due?",
+      "target": {
+        "id": "AUTH",
+        "records": [
+          {
+            "id": "B-CURRENT1",
+            "text": "West sleeve rule: checked-out sleeves may leave the reading room."
+          },
+          {
+            "id": "B-CURRENT2",
+            "text": "West sleeve rule: sleeves return by the next calendar day at 14:00."
+          }
+        ]
+      },
+      "fillers": [
+        {
+          "id": "F1",
+          "records": [
+            {
+              "id": "B-STALE",
+              "text": "Archived sleeve rule: checkout-day returns were previously required."
+            }
+          ]
+        },
+        {
+          "id": "F2",
+          "records": [
+            {
+              "id": "B-MAPS",
+              "text": "West map reading tables have room for a single map sleeve."
+            }
+          ]
+        },
+        {
+          "id": "F3",
+          "records": [
+            {
+              "id": "B-DESK",
+              "text": "West desk begins accepting hold requests at 14:00."
+            }
+          ]
+        },
+        {
+          "id": "F4",
+          "records": [
+            {
+              "id": "B-EAST",
+              "text": "East room instruction sheets use a separate due-time rule."
+            }
+          ]
+        }
+      ],
+      "absent": {
+        "id": "ALT",
+        "records": [
+          {
+            "id": "B-NOTE1",
+            "text": "The maps returned from cleaning."
+          },
+          {
+            "id": "B-NOTE2",
+            "text": "The sign above the table labels its width."
+          }
+        ]
+      },
+      "oracle": {
+        "access": "outside_allowed",
+        "deadline": "next_day_14:00"
+      },
+      "candidates": {
+        "front": {
+          "state": "answer",
+          "facts": {
+            "access": "outside_allowed",
+            "deadline": "next_day_14:00"
+          },
+          "evidence": [
+            "B-CURRENT1",
+            "B-CURRENT2"
+          ]
+        },
+        "middle": {
+          "state": "answer",
+          "facts": {
+            "access": "outside_allowed",
+            "deadline": "next_day_14:00"
+          },
+          "evidence": [
+            "B-MAPS",
+            "B-DESK"
+          ]
+        },
+        "end": {
+          "state": "answer",
+          "facts": {
+            "access": "outside_allowed",
+            "deadline": "next_day_14:00"
+          },
+          "evidence": [
+            "B-CURRENT1",
+            "B-CURRENT2"
+          ]
+        },
+        "absent": {
+          "state": "answer",
+          "facts": {
+            "access": "outside_allowed",
+            "deadline": "next_day_14:00"
+          },
+          "evidence": [
+            "B-CURRENT1",
+            "B-CURRENT2"
+          ]
+        }
+      }
+    },
+    {
+      "id": "C",
+      "question": "Where does a visitor claim an evening archive locker key, and what is the pickup deadline?",
+      "target": {
+        "id": "AUTH",
+        "records": [
+          {
+            "id": "C-CURRENT1",
+            "text": "Evening locker key policy: a visitor must claim the key at the badge desk."
+          },
+          {
+            "id": "C-CURRENT2",
+            "text": "Evening locker key policy: claim the key the reservation day by 17:00."
+          }
+        ]
+      },
+      "fillers": [
+        {
+          "id": "F1",
+          "records": [
+            {
+              "id": "C-ARCHIVE",
+              "text": "The notice about a next-day pickup was archived after a trial."
+            }
+          ]
+        },
+        {
+          "id": "F2",
+          "records": [
+            {
+              "id": "C-OPEN",
+              "text": "The main counter opens before evening starts."
+            }
+          ]
+        },
+        {
+          "id": "F3",
+          "records": [
+            {
+              "id": "C-KEYS",
+              "text": "Locker key tags carry a locker number."
+            }
+          ]
+        },
+        {
+          "id": "F4",
+          "records": [
+            {
+              "id": "C-BADGE",
+              "text": "Staff check badges on arrival at the reception door."
+            }
+          ]
+        }
+      ],
+      "absent": {
+        "id": "ALT",
+        "records": [
+          {
+            "id": "C-NOTE1",
+            "text": "A maintenance note lists the dimensions of the key tag."
+          },
+          {
+            "id": "C-NOTE2",
+            "text": "The badge desk is near the west stairs."
+          }
+        ]
+      },
+      "oracle": {
+        "access": "badge_desk",
+        "deadline": "reservation_day_17:00"
+      },
+      "candidates": {
+        "front": {
+          "state": "answer",
+          "facts": {
+            "access": "badge_desk",
+            "deadline": "reservation_day_17:00"
+          },
+          "evidence": [
+            "C-CURRENT1",
+            "C-CURRENT2"
+          ]
+        },
+        "middle": {
+          "state": "insufficient",
+          "facts": {},
+          "evidence": []
+        },
+        "end": {
+          "state": "answer",
+          "facts": {
+            "access": "badge_desk",
+            "deadline": "next_day_17:00"
+          },
+          "evidence": [
+            "C-CURRENT1",
+            "C-CURRENT2"
+          ]
+        },
+        "absent": {
+          "state": "insufficient",
+          "facts": {},
+          "evidence": []
+        }
+      }
+    }
+  ]
+}

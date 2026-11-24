@@ -1,48 +1,40 @@
 # Prompt Engineering and Generative AI (AI Plus One)
 
-**Working draft. This is a book-length first draft across five chapters. It has not received expert or classroom review.**
+**Working draft.** Nine chapters teach how to make generative-text work observable, checkable, and bounded. The examples and candidate responses are fictional. The book has not received expert or classroom review and does not replace a source textbook or a university course.
 
-A good-looking answer can still solve the wrong job. This book starts by defining what good means, then tests the methods and the systems that produce it.
+You can use the book without a model account. The optional offline labs use Python 3.9+ and no external packages. Begin each exercise by predicting the result yourself. If you use model assistance later, use only synthetic inputs, record the changes, and verify consequential claims independently.
 
-| Chapter | Status |
+## Part I · Build a checkable workflow
+
+| Chapter | Reader outcome |
 | --- | --- |
-| 1. [Describe the task before writing prompts](chapters/01-describe-the-task.md) | Rough draft with offline exercise |
-| 2. [Compare prompt patterns on the same job](chapters/02-compare-prompt-patterns.md) | Rough draft |
-| 3. [Ground answers in evidence](chapters/03-ground-answers.md) | Rough draft |
-| 4. [Bound what a tool-using agent may do](chapters/04-bound-agent-actions.md) | Rough draft |
-| 5. [Build a repeatable prompt evaluation](chapters/05-repeatable-evaluation.md) | Rough draft |
+| 1. [Describe the task before writing prompts](chapters/01-describe-the-task.md) | Specify what succeeds and decide what to do with missing or conflicting evidence |
+| 2. [Compare prompt patterns on the same job](chapters/02-compare-prompt-patterns.md) | Change one part of a prompt and compare against a fixed baseline |
+| 3. [Ground answers in evidence](chapters/03-ground-answers.md) | Verify which applicable evidence supports each claim |
+| 4. [Bound what a tool-using agent may do](chapters/04-bound-agent-actions.md) | Design a read-only runner, a review boundary and a stop rule |
+| 5. [Build a repeatable prompt evaluation](chapters/05-repeatable-evaluation.md) | Preserve paired evidence, timeouts and honest denominators |
 
-## Who this is for
+Start with the [first-attempt sheet](activity/FIRST-ATTEMPT.md), then consult the [Part I guide](PART-I.md). The [Part I capstone](activity/CAPSTONE.md) connects the task, evidence, permissions and evaluation.
 
-For readers with basic Python, JSON, and enough arithmetic to work with fractions. You can follow the worked cases without Python and run the optional offline labs to verify the mechanisms. Predict each outcome before reading the worked answer. Any live model work is optional and uses only synthetic inputs.
+## Part II · Diagnose harder cases
 
-## Try the first activity
+| Chapter | Reader outcome |
+| --- | --- |
+| 6. [Diagnose audience, role, and evidence separately](chapters/06-diagnose-audience-and-prompt.md) | Adapt a presentation without changing the decision or its evidence |
+| 7. [Measure whether context can do its job](chapters/07-measure-context-use.md) | Tell when evidence is missing and when it was present but not used correctly |
+| 8. [Optimize against a fixed test](chapters/08-optimize-against-a-fixed-test.md) | Try prompt variants without teaching the holdout to agree with you |
+| 9. [Operate multimodal workflows](chapters/09-operate-multimodal-workflows.md) | Verify claims across image and text, and justify a hold or a fallback |
 
-Start with the [first-attempt sheet](activity/FIRST-ATTEMPT.md) and [scenarios](fixtures/scenarios.json) before reading the worked chapter. The candidate outputs are synthetic fixtures, not observations from a model. With Python 3.9+ from the repository root:
+Use the [Part II guide](PART-II.md) for the labs and the [transfer exercise](activity/TRANSFER.md) to combine them.
+
+## Verify the offline examples
+
+From the repository root:
 
 ```sh
-python3 -B validate.py A fixtures/candidates/A-good.json
-python3 -B validate.py A fixtures/candidates/A-stale.json
-python3 -B lab/check_examples.py
 python3 -B -m unittest discover -s tests -v
 ```
 
-The checker uses only the Python standard library. It reads local files, makes no external calls, and takes no action on the result. It returns 0 for accepted, 1 for rejected and 2 for unusable input or scenario errors. The checker evaluates one narrow, synthetic task, not a model or an educational outcome. No purchases, account, API or LMS required.
+Part I gives you the baseline, the evidence checks, and the score. Part II asks what changes when the audience, context layout, candidate-selection procedure, or input format changes. Each exercise states its own decision contract: Chapter 3 can support a partial answer, while Chapter 7 deliberately requires both facts or an abstention. Neither approach is a universal rule.
 
-## Additional offline labs
-
-- `python3 -B lab/decoding.py`: verify the three-token probability and sampling example in Chapter 2.
-- `python3 -B lab/repair_desk.py D4 -k 2`: compare retrieval of a conflicting policy pair in Chapter 3. See the [repair-desk handout](activity/RETRIEVAL-LAB.md).
-- `python3 -B lab/check_examples.py`: reproduce the toy classification, read-only review traces, and paired-evaluation arithmetic in Chapters 2, 4 and 5.
-
-## Evidence retrieval lab
-
-Use the [repair-desk handout](activity/RETRIEVAL-LAB.md) to compare word-overlap ranking to a scope-and-date filter. All five policies and six cases are fictional, and the comparison calls no model.
-
-## Capstone
-
-Use the [capstone handout](activity/CAPSTONE.md) to connect all five chapters. Start unaided and use only synthetic materials.
-
-## Provenance
-
-This snapshot is original AI-assisted teaching material with fictional cases, examples and checkers. It does not copy earlier book manuscripts, institutional files, student material, or third-party visual assets. Public technical references are linked from the chapters. This draft does not supersede any source book.
+The book does not copy earlier manuscripts, institutional files, student material, or proprietary assets. Primary technical references are linked where used. Simulations, diagrams and authored results are not model benchmarks or proof of deployment.
