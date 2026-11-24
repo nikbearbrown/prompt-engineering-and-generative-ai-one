@@ -1,0 +1,12 @@
+{
+  "state": "over_cap",
+  "seats": 18,
+  "unit_cents": 600,
+  "cap_cents": 10000,
+  "total_cents": 10800,
+  "evidence": [
+    "E-COUNT",
+    "E-PRICE",
+    "E-CAP"
+  ]
+}

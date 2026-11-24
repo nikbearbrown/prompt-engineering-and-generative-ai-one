@@ -1,0 +1,11 @@
+{
+  "state": "insufficient_evidence",
+  "seats": null,
+  "unit_cents": null,
+  "cap_cents": null,
+  "total_cents": null,
+  "evidence": [
+    "D-CAP",
+    "D-COUNT"
+  ]
+}

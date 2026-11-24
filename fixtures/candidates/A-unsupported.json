@@ -1,0 +1,12 @@
+{
+  "state": "within_cap",
+  "seats": 18,
+  "unit_cents": 475,
+  "cap_cents": 10000,
+  "total_cents": 8550,
+  "evidence": [
+    "A-PRICE",
+    "A-CAP",
+    "A-OLD"
+  ]
+}

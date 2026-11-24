@@ -1,0 +1,12 @@
+{
+  "state": "conflict",
+  "seats": 17,
+  "unit_cents": 500,
+  "cap_cents": 10000,
+  "total_cents": 8500,
+  "evidence": [
+    "C-COUNT1",
+    "C-COUNT2",
+    "C-CAP"
+  ]
+}

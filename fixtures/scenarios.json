@@ -1,0 +1,120 @@
+{
+  "A": [
+    {
+      "id": "A-NOW",
+      "field": "seats",
+      "value": 18,
+      "authority": "current"
+    },
+    {
+      "id": "A-PRICE",
+      "field": "unit_cents",
+      "value": 475,
+      "authority": "current"
+    },
+    {
+      "id": "A-CAP",
+      "field": "cap_cents",
+      "value": 10000,
+      "authority": "current"
+    },
+    {
+      "id": "A-OLD",
+      "field": "seats",
+      "value": 24,
+      "authority": "archived"
+    }
+  ],
+  "B": [
+    {
+      "id": "B-COUNT1",
+      "field": "seats",
+      "value": 20,
+      "authority": "current"
+    },
+    {
+      "id": "B-COUNT2",
+      "field": "seats",
+      "value": 20,
+      "authority": "current"
+    },
+    {
+      "id": "B-PRICE",
+      "field": "unit_cents",
+      "value": 500,
+      "authority": "current"
+    },
+    {
+      "id": "B-CAP",
+      "field": "cap_cents",
+      "value": 10000,
+      "authority": "current"
+    }
+  ],
+  "C": [
+    {
+      "id": "C-COUNT1",
+      "field": "seats",
+      "value": 16,
+      "authority": "current"
+    },
+    {
+      "id": "C-COUNT2",
+      "field": "seats",
+      "value": 19,
+      "authority": "current"
+    },
+    {
+      "id": "C-CAP",
+      "field": "cap_cents",
+      "value": 10000,
+      "authority": "current"
+    },
+    {
+      "id": "C-OLD",
+      "field": "unit_cents",
+      "value": 500,
+      "authority": "archived"
+    }
+  ],
+  "D": [
+    {
+      "id": "D-COUNT",
+      "field": "seats",
+      "value": 12,
+      "authority": "current"
+    },
+    {
+      "id": "D-CAP",
+      "field": "cap_cents",
+      "value": 10000,
+      "authority": "current"
+    },
+    {
+      "id": "D-OLD",
+      "field": "unit_cents",
+      "value": 500,
+      "authority": "archived"
+    }
+  ],
+  "E": [
+    {
+      "id": "E-COUNT",
+      "field": "seats",
+      "value": 18,
+      "authority": "current"
+    },
+    {
+      "id": "E-PRICE",
+      "field": "unit_cents",
+      "value": 600,
+      "authority": "current"
+    },
+    {
+      "id": "E-CAP",
+      "field": "cap_cents",
+      "value": 10000,
+      "authority": "current"
+    }
+  ]
+}

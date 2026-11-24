@@ -1,0 +1,12 @@
+{
+  "state": "conflict",
+  "seats": null,
+  "unit_cents": null,
+  "cap_cents": null,
+  "total_cents": null,
+  "evidence": [
+    "C-COUNT1",
+    "C-COUNT2",
+    "C-CAP"
+  ]
+}
